@@ -22,6 +22,21 @@ Follow-up recommendations by 3Blue1Brown:
 
 This might seem a little bit excessive, but trust me it's worth it ;) Have fun!
 
+### Rotations with Quaternions
+You can use unit quaternions to model 3D rotations elegantly. A really nice intuition for that is to think of it as a mixture of four 180 degree rotated orientations. (See the two videos on Euler angles and quaternions above).
+
+You have the base orientation corresponding to (1, 0, 0, 0) and then three 180 degree rotations along the three different axis corresponding to (0, 1, 0, 0), (0, 0, 1, 0) and (0, 0, 0, 1) respectively. When you mix them and normalize to unit quaternions you get a mixture of the orientations proportional to the weight you gave each.
+
+E.g. (0, 0.71, 0.71, 0) would be an interpolation of a 180 degree rotation about the i and j axis (try it in the interactive videos above). That's a little hard to imagine, but imagine (0.57, 0.57, 0.57, 0), it's an interpolation of the base orientation and equal parts of each of the other two 180 degrees rotations. I.e. it's the interpolation of equal parts of a 180 degree rotation about the i axis and a 180 degree rotation about the j axis. The original orientation is still in the mix, but slightly dominated by the combination of the two others. This points the north pole at 45 degrees between the axis i and j and at a little bit more than 90 degrees from the original pole.
+
+### Quaternion Interpolation
+Often we want to interpolate between quaternions. E.g. when we try to simulate a transition between two orientations by showing frames of intermediate orientations in an animation. 
+
+With LERP we define a direct path in the 4 dimensional space, but leave the unit sphere. Thus we get non-unit quaternions. One example would be t=0.5, q_1 = (0, 0.71, 0.71, 0), q_2 = (0, 0.71, 0, 0.71) and their LERP interpolation would be (0, 0.71, 0.355, 0.355) with sqrt(0.71^2 + 0.355^2 + 0.355^2)‎ = 0.87. In order to still get a valid rotation interpolation, we normalize back to the unit sphere. This results in distortions, because while we make equal sized steps in the hyperspace, projecting them back on the unit sphere makes them differently sized. 
+
+With SLERP we make sure to stay on the hypersphere in the first place and thus can easily define equal sized partial rotation steps by defining equal sized time steps in the interpolation. We can also define arbitrary non-equal sized time steps and make the movement slower in the beginning and end and faster in the middle or something like that.
+
+
 ## Installation
 
 Install the necessary dependencies via pip:
