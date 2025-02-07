@@ -1,5 +1,7 @@
 # Quaterp - LERP vs SLERP Visualization
 
+<img width="1092" alt="image" src="https://github.com/user-attachments/assets/485fa162-8084-44b8-bbc3-65db5aefa760" />
+
 `quaterp` visualizes the difference between two types of quaternion interpolation techniques: **LERP** (Linear Interpolation) and **SLERP** (Spherical Linear Interpolation). It provides an interactive 3D plot to compare how quaternions evolve through these interpolation methods.
 
 ## Features
@@ -7,6 +9,7 @@
 - Visualize the path of quaternions as they interpolate between two points using both LERP and SLERP.
 - Pan around to understand the interpolation path in 3D.
 - Pick between different views and aspect ratios of the 3D plot.
+
 
 ## Installation
 
