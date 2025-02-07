@@ -11,6 +11,17 @@
 - Pick between different views and aspect ratios of the 3D plot.
 
 
+## Background on Quaternions
+This probably doesn't make a lot of sense if you are not already pretty familiar with quaternions. For a 'quick' introduction check out 3Blue1Brown on [Quaternions 1](https://www.youtube.com/watch?v=d4EgbgTm0Bg) (30 min). For a very thorough introduction also check out [Quaternions 2](https://www.youtube.com/watch?v=zjMuIxRvygQ) (6 min), Ben Eater's [interactive videos](https://eater.net/quaternions), 3Blue1Brown on [Euler's Formula 1](https://www.youtube.com/watch?v=mvmuCPvRoWQ) (24 min) and [Euler's Formula 2](https://www.youtube.com/watch?v=v0YEaeIClKY) (3 min).
+
+Follow-up recommendations by 3Blue1Brown: 
+ - [Gimbal lock](https://www.youtube.com/watch?v=zc8b2Jo7mno&t=0s) (8 min)
+ - Comparing [Euler angles and quaternions 1](https://www.youtube.com/watch?v=syQnn_xuB8U&t=0s) (10 min) and [Euler angles and quaternions 2](https://www.youtube.com/watch?v=4mXL751ko0w&t=0s) (16 min) from the perspective of an animator. Contains nice mental model to interpret the orientation after an quaternion rotation as mixture of orientations, much like color is a mixture of colors. 
+ - [Quanta magazine article](https://www.quantamagazine.org/the-strange-numbers-that-birthed-modern-algebra-20180906) on quaternions
+ - Fun [connection with Alice in Wonderland](https://www.newscientist.com/article/mg20427391-600-alices-adventures-in-algebra-wonderland-solved)
+
+This might seem a little bit excessive, but trust me it's worth it ;) Have fun!
+
 ## Installation
 
 Install the necessary dependencies via pip:
