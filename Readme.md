@@ -29,6 +29,8 @@ You have the base orientation corresponding to (1, 0, 0, 0) and then three 180 d
 
 E.g. (0, 0.71, 0.71, 0) would be an interpolation of a 180 degree rotation about the i and j axis (try it in the interactive videos above). That's a little hard to imagine, but imagine (0.57, 0.57, 0.57, 0), it's an interpolation of the base orientation and equal parts of each of the other two 180 degrees rotations. I.e. it's the interpolation of equal parts of a 180 degree rotation about the i axis and a 180 degree rotation about the j axis. The original orientation is still in the mix, but slightly dominated by the combination of the two others. This points the north pole at 45 degrees between the axis i and j and at a little bit more than 90 degrees from the original pole.
 
+You get the exact 90 degree rotation from the pole with 45 degrees from the i and j axis, if you use (0.71, 0.5, 0.5, 0), because in this case you mix both, the i and j 180 degrees rotations equally but rebalance for the fact that they dominate the real axis as they are two and the real axis is just one. 
+
 ### Quaternion Interpolation
 Often we want to interpolate between quaternions. E.g. when we try to simulate a transition between two orientations by showing frames of intermediate orientations in an animation. 
 
